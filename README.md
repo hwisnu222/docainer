@@ -33,22 +33,45 @@ Docainer helps developers quickly scaffold Docker configurations for web project
 
 Ensure Python 3.10+ and a Linux OS.
 
-Clone the repository and build the binary:
+### Option 1: Clone and Build Manually
 
 ```
-git clone https://github.com/your-username/docainer.git
+git clone https://github.com/hwisnu222/docainer.git
 cd docainer
 make build
+cd dist/
+chmod +x docainer
+sudo mv docainer /usr/local/bin/
 ```
 
 This will produce a binary file named `docainer`.
+
+### Option 2: Download Prebuilt Binary from Release
+
+Download the latest release and install it globally:
+
+```
+curl -s https://raw.githubusercontent.com/hwisnu222/docainer/main/install.sh | sh
+```
+
+#### wget:
+
+```
+wget -qO - https://raw.githubusercontent.com/hwisnu222/docainer/main/install.sh | sh
+```
+
+Now you can run it from anywhere:
+
+```
+docainer
+```
 
 ## Usage
 
 To run the generator:
 
 ```
-./docainer
+docainer
 ```
 
 You will be prompted to choose a stack. The tool will then generate the corresponding Dockerfile and docker-compose.yml files in your current directory.
