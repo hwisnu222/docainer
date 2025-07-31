@@ -36,6 +36,6 @@ jobs:
       - name: Upload binary to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/main
+          files: dist/docainer
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
