@@ -31,7 +31,7 @@ jobs:
         run: pip install pyinstaller
 
       - name: Build binary with PyInstaller
-        run: make install
+        run: make build
 
       - name: Upload binary to GitHub Release
         uses: softprops/action-gh-release@v2
