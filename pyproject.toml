@@ -6,7 +6,7 @@ authors = [
     {name = "Wisnu Box",email = "hwisnu222@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12,<3.13"
 dependencies = [
     "jinja2 (>=3.1.6,<4.0.0)",
     "pyyaml (>=6.0.2,<7.0.0)",
