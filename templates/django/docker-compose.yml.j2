@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  {{app}}:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "{{port}}:{{container_port}}"
+    volumes:
+      - .:/app
+    environment:
+      - DJANGO_SETTINGS_MODULE=myproject.settings.production
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

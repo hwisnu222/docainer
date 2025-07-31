@@ -1,0 +1,27 @@
+django:
+  dockerfile:
+    base_image: python:3.12-slim
+
+  compose:
+    service_name: django-app
+    port: 8000
+    container_port: 8000
+
+reactjs:
+  dockerfile:
+    base_image: node:20-alpine
+    nginx_image: nginx:stable-alpine
+
+  compose:
+    service_name: "react-app"
+    port: 3000
+    container_port: 80
+
+nextjs:
+  dockerfile:
+    base_image: node:20-alpine
+
+  compose:
+    service_name: "next-app"
+    port: 3000
+    container_port: 3000

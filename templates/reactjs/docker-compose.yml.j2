@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  {{service_name}}:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "{{port}}:{{container_port}}"
+    restart: always
