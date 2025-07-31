@@ -51,7 +51,7 @@ This will produce a binary file named `docainer`.
 Download the latest release and install it globally:
 
 ```
-curl -s https://raw.githubusercontent.com/hwisnu222/docainer/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/hwisnu222/docainer/main/install.sh | sh
 ```
 
 #### wget:
