@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  vue-app:
+    build: .
+    ports:
+      - "{{port}}:{{container_port}}"
+    restart: unless-stopped
